@@ -13,8 +13,6 @@ remarks = [
     "% is the wind beneath my wings.",
     "% has a great reputation.",
     "Great job today, everyone!",
-    "Go team!",
-    "Super duper, gang!",
     "What a great group of individuals there are in here. I'm proud to be chatting with you.",
     "You all are capable of accomplishing whatever you set your mind to.",
     "I love this team's different way of looking at things!",

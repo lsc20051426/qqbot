@@ -26,14 +26,11 @@ HELP_INFO = """
 ###
 
 HELP_INFO = """
-    version/about   #版本信息和关于
-    time            #显示时间
-    echo 爱你        #重复后面的话
+    about           #版本信息和关于
     help            #本内容
-    uptime          #服务运行时间
-    roll            #返回1-100随机值
     whv             #查询WHV百科的内容
-    chat            #用英文和机器人聊天
+    chat            #用英文和CleverBot机器人聊天
+    simi            #用任何语言和Simsimi机器人聊天
     encourage       #让机器人鼓励自己
     暂时不支持图片和表情(少了很多乐趣LOL)
 """
