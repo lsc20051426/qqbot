@@ -5,9 +5,13 @@
   run method
 ###
 
-
+log   = new (require 'log')('debug')
 
 module.exports = (content ,send, robot, message)->
+  log.debug message.from_uin, robot.config.admin_uins
+  if message.from_uin not in robot.config.admin_uins
+    return
+
   if content.match /^die$/i
     robot.die("debug")
     

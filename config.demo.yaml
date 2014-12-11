@@ -20,3 +20,7 @@ plugins:
 # apiserver 插件配置
 api_port:  3000
 api_token: ''
+
+admin_uins: 
+    - 2357986725
+    - 2357986725
