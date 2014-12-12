@@ -27,7 +27,11 @@
   "dependencies": {
     "request": "*",
     "log": ">= 1.4.0",
-    "js-yaml" : ">= 3.0.0"
+    "js-yaml" : ">= 3.0.0",
+    "cheerio": "0.18.0",
+    "iconv": "2.1.4",
+    "jschardet": "1.1.0",
+    "cleverbot-node": "0.1.8"
   },
 
   "engines": {

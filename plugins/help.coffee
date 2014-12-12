@@ -14,9 +14,6 @@
    stop:      init_func       # 停止插件（比如端口占用）
  }
  
- 
-###
-
 HELP_INFO = """
     version/about   #版本信息和关于
     plugins         #查看载入的插件
@@ -26,16 +23,36 @@ HELP_INFO = """
     uptime          #服务运行时间
     roll            #返回1-100随机值
 """
+###
+
+HELP_INFO = """
+    version/about   #版本信息和关于
+    time            #显示时间
+    echo 爱你        #重复后面的话
+    help            #本内容
+    uptime          #服务运行时间
+    roll            #返回1-100随机值
+    whv             #查询WHV百科的内容
+    chat            #用英文和机器人聊天
+    encourage       #让机器人鼓励自己
+    暂时不支持图片和表情(少了很多乐趣LOL)
+"""
 
 fs = require 'fs'
 Path = require 'path'
 file_path = Path.join __dirname, "..", "package.json"
 bundle = JSON.parse( fs.readFileSync file_path )
+log   = new (require 'log')('debug')
+
+
+Array::remove = (e) -> @[t..t] = [] if (t = @indexOf(e)) > -1
+
 
 VERSION_INFO = """
     v#{bundle.version} qqbot
-    http://github.com/xhan/qqbot
-    本工具还由 糗事百科 热血赞助！
+    http://github.com/lsc20051426/qqbot
+    本工具基于QQBot二次开发,专为澳洲WHA高端技术交流群(70234147),新西兰WHV高端技术交流群(280576585),新西兰SFV银蕨高端技术交流群(252521690)三大群服务.
+    开发者L(qq:527248982)
 """
 
 ###
@@ -74,3 +91,21 @@ module.exports = (content ,send, robot, message)->
   if content.match /^roll$/i
     # TODO:who? , need a reply method
     send Math.round( Math.random() * 100)
+
+  if content.match /^comic$/i
+    robot.request.get {url:"http://api.hitokoto.us/rand",json:true}, (e,r,data)->      
+      if data and data.hitokoto
+        send data.hitokoto + " --" + data.source
+      else
+        send e
+
+  # groups = [1762379213, 608679695, 3855906352]
+  #if message.type == 'group_message' and message.from_gid in groups
+  #  log.debug "DEBUG-HELPER", message
+  #  msg = message.from_user.nick + '在' + message.from_group.name + '群里说:' + content
+  #  log.debug msg
+  #  groups.remove(message.from_gid)
+  #  log.debug "DEBUG-HELPER", groups
+  #  for group in groups
+  #    robot.send_message_to_group group, msg
+
