@@ -1,6 +1,13 @@
 remarks = [
-    "Great job, %!",
-    "Way to go, %!",
+    "%, 你一定会抢到WHV名额的",
+    "%, 你要好好学习英语,加油考雅思",
+    "加油%, 你一定会进鸭哥WHV团队的!",
+    "%, No pains,No gains!",
+    "%, 据说爆照的话,你的雅思可以7炸",
+    "%, 又是一个充满希望的一天!",
+    "想抢到SFV名额吗?, %, 请抱紧鸭哥的大腿",
+    "%，你今天去yiminer.com去读精华帖子吗?",
+    "赶快去学习!",
     "% is amazing, and everyone should be happy this amazing person is around.",
     "I wish I was more like %.",
     "% is good at like, 10 times more things than I am.",
@@ -15,14 +22,7 @@ remarks = [
     "Great job today, everyone!",
     "What a great group of individuals there are in here. I'm proud to be chatting with you.",
     "You all are capable of accomplishing whatever you set your mind to.",
-    "I love this team's different way of looking at things!",
-    "%, 你一定会抢到WHV名额的",
-    "%, 你要好好学习英语,加油考雅思",
-    "%, No pains,No gains!",
-    "%, 据说爆照的话,你的雅思可以7炸",
-    "%, 又是一个充满希望的一天!",
-    "想抢到SFV名额吗?, %, 请抱紧鸭哥的大腿",
-    "赶快去学习!"
+    "I love this team's different way of looking at things!"
 ]
 
 

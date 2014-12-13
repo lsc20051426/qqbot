@@ -1,5 +1,4 @@
 ###
-
 插件支持两个方法调用
  init(robot)
  received(content,send,robot,message)
@@ -13,16 +12,16 @@
    received:  received_func   # 接受消息
    stop:      init_func       # 停止插件（比如端口占用）
  }
- 
-HELP_INFO = """
-    version/about   #版本信息和关于
-    plugins         #查看载入的插件
-    time            #显示时间
-    echo 爱你        #重复后面的话
-    help            #本内容
-    uptime          #服务运行时间
-    roll            #返回1-100随机值
-"""
+#Array::remove = (e) -> @[t..t] = [] if (t = @indexOf(e)) > -1
+# groups = [1762379213, 608679695, 3855906352]
+#if message.type == 'group_message' and message.from_gid in groups
+#  log.debug "DEBUG-HELPER", message
+#  msg = message.from_user.nick + '在' + message.from_group.name + '群里说:' + content
+#  log.debug msg
+#  groups.remove(message.from_gid)
+#  log.debug "DEBUG-HELPER", groups
+#  for group in groups
+#    robot.send_message_to_group group, msg
 ###
 
 HELP_INFO = """
@@ -30,8 +29,9 @@ HELP_INFO = """
     help            #本内容
     whv             #查询WHV百科的内容
     chat            #用英文和CleverBot机器人聊天
-    simi            #用任何语言和Simsimi机器人聊天
+    comic           #来一句心灵鸡汤
     encourage       #让机器人鼓励自己
+    simi            #用任何语言和Simsimi机器人聊天
     暂时不支持图片和表情(少了很多乐趣LOL)
 """
 
@@ -40,9 +40,6 @@ Path = require 'path'
 file_path = Path.join __dirname, "..", "package.json"
 bundle = JSON.parse( fs.readFileSync file_path )
 log   = new (require 'log')('debug')
-
-
-Array::remove = (e) -> @[t..t] = [] if (t = @indexOf(e)) > -1
 
 
 VERSION_INFO = """
@@ -88,21 +85,3 @@ module.exports = (content ,send, robot, message)->
   if content.match /^roll$/i
     # TODO:who? , need a reply method
     send Math.round( Math.random() * 100)
-
-  if content.match /^comic$/i
-    robot.request.get {url:"http://api.hitokoto.us/rand",json:true}, (e,r,data)->      
-      if data and data.hitokoto
-        send data.hitokoto + " --" + data.source
-      else
-        send e
-
-  # groups = [1762379213, 608679695, 3855906352]
-  #if message.type == 'group_message' and message.from_gid in groups
-  #  log.debug "DEBUG-HELPER", message
-  #  msg = message.from_user.nick + '在' + message.from_group.name + '群里说:' + content
-  #  log.debug msg
-  #  groups.remove(message.from_gid)
-  #  log.debug "DEBUG-HELPER", groups
-  #  for group in groups
-  #    robot.send_message_to_group group, msg
-
