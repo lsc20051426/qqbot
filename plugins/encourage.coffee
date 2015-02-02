@@ -7,22 +7,7 @@ remarks = [
     "%, 又是一个充满希望的一天!",
     "想抢到SFV名额吗?, %, 请抱紧鸭哥的大腿",
     "%，你今天去yiminer.com去读精华帖子吗?",
-    "赶快去学习!",
-    "% is amazing, and everyone should be happy this amazing person is around.",
-    "I wish I was more like %.",
-    "% is good at like, 10 times more things than I am.",
-    "%, you are an incredibly sensitive person who inspires joyous feelings in all those around you.",
-    "%, you are crazy, but in a good way.",
-    "% has a phenomenal attitude.",
-    "% is a great part of the team!",
-    "I admire %'s strength and perseverance.",
-    "% is a problem-solver and cooperative teammate.",
-    "% is the wind beneath my wings.",
-    "% has a great reputation.",
-    "Great job today, everyone!",
-    "What a great group of individuals there are in here. I'm proud to be chatting with you.",
-    "You all are capable of accomplishing whatever you set your mind to.",
-    "I love this team's different way of looking at things!"
+    "赶快去学习!"
 ]
 
 
